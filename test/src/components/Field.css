@@ -1,0 +1,14 @@
+#field{
+    display: grid;
+    grid-template-columns: repeat(9, 100px);
+    grid-template-rows: repeat(9, 100px);
+    width: 900px;
+    height: 900px;
+    background-color: aqua;
+}
+
+#field .tile {
+    width: 100px;
+    height: 100px;
+    background-image: url("../assets/images/pixil-frame-0.png");
+}
