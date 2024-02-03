@@ -10,5 +10,12 @@
 #field .tile {
     width: 100px;
     height: 100px;
-    background-image: url("../assets/images/pixil-frame-0.png");
+    /* background-image: url("../assets/images/pixil-frame-0.png"); */
+}
+
+#field .tile .mineButton {
+    /* background-color: transparent; */
+    /* border-color: transparent; */
+    width: 100px;
+    height: 100px;
 }
