@@ -7,15 +7,13 @@
     background-color: aqua;
 }
 
-#field .tile {
+#field .spot {
     width: 100px;
     height: 100px;
-    /* background-image: url("../assets/images/pixil-frame-0.png"); */
 }
 
-#field .tile .mineButton {
-    /* background-color: transparent; */
-    /* border-color: transparent; */
+#field .spot .mineButton {
     width: 100px;
     height: 100px;
+    /* background-image: url("../assets/images/pige.jpg"); */
 }
