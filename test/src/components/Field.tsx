@@ -14,8 +14,7 @@ export default function Field() {
                 <div className="spot">
                     <button id={horizontalAxis[i]+verticalAxis[j]} 
                             className="mineButton" 
-                            onClick={e => MineClick(e.currentTarget.id, ('true' === e.currentTarget.value))}
-                            value="true">
+                            onClick={e => MineClick(e.currentTarget.id)}>
                     </button>
                 </div>
             );
@@ -24,5 +23,3 @@ export default function Field() {
 
     return <div id="field">{board}</div>
 }
-
-// Spread types may only be created from object types.

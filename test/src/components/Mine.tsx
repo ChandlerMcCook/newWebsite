@@ -1,8 +1,11 @@
+import Map from './MapClass'
 
-export default function MineClick(id: string, mine : boolean) {
+let board : Map = new Map(9, 9, 10);
+
+export default function MineClick(id: string) {
     let slot = document.getElementById(id);
     if (slot) {
-        if(mine) {
+        if(board.getTileInfo(id)) {
             slot.style.backgroundColor = "red";
         } else {
             slot.style.backgroundColor = "#45db24";
