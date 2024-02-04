@@ -1,6 +1,6 @@
 import Tile from './TileClass';
 
-class Map {
+class TileMap {
     arr : Tile[][] = [];
     options : number[][] = [];
     
@@ -13,7 +13,7 @@ class Map {
             this.arr[i] = [];
             this.options[i] = [];
             for (let j=0; j<width; j++) {
-                this.arr[i][j] = new Tile;
+                this.arr[i][j] = new Tile();
                 this.options.push([i, j]);
             }
         }
@@ -36,4 +36,4 @@ class Map {
 }
 
 
-export default Map;
+export default TileMap;

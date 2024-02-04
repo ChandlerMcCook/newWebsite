@@ -3,7 +3,7 @@ class Tile {
     touching : number;
 
     constructor() {
-        this.mineStatus = true;
+        this.mineStatus = false;
         this.touching = 0;
     }
 
