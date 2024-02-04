@@ -1,8 +1,8 @@
 import './Field.css';
 import MineClick from "./Mine";
 
-const verticalAxis = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
-const horizontalAxis = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'];
+const verticalAxis = ['0', '1', '2', '3', '4', '5', '6', '7', '8'];
+const horizontalAxis = ['0', '1', '2', '3', '4', '5', '6', '7', '8'];
 // const minePicture = require("../assets/images/piggity.png")
 
 export default function Field() {
