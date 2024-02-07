@@ -19,11 +19,27 @@ class TileMap {
         }
 
         // Set mines in tiles
-        for (var n = 0; n < total; n++) {
-            var index = Math.floor(Math.random()*this.options.length);
-            var choice = this.options[index];
-            var i = choice[0];
-            var j = choice[1];
+        for (let n = 0; n < total; n++) {
+            // Randomly generate a choice
+            let index = Math.floor(Math.random()*this.options.length);
+            let choice = this.options[index];
+            let i = choice[0];
+            let j = choice[1];
+
+            // Adjust neighboring Tile touching counts
+            for (let a=i-1; a<(i+2); a++) {
+                if ((a < 0) || (a >= height)) {
+                    continue;
+                }
+                for (let b=j-1; b<(j+2); b++) {
+                    if ((b < 0) || (b >= width)) {
+                        continue;
+                    }
+                    this.arr[a][b].increaseTouching();
+                }
+            }
+
+
             // Deletes that spot so it's no longer an option
             this.options.splice(index, 1);
             this.arr[i][j].mineStatus = true;
@@ -32,6 +48,10 @@ class TileMap {
 
     getTileInfo(id : string) {
         return this.arr[Number(id[0])][Number(id[1])].getInfo();
+    }
+
+    getTileTouching(id: string) {
+        return this.arr[Number(id[0])][Number(id[1])].getTouching();
     }
 }
 

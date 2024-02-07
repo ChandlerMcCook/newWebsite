@@ -11,6 +11,7 @@ export default function MineClick(id: string) {
             slot.style.backgroundColor = "red";
         } else {
             slot.style.backgroundColor = "#45db24";
+            slot.innerHTML = String(b.getTileTouching(id));
         }
     }
 };

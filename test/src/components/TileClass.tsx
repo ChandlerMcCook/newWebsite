@@ -7,7 +7,11 @@ class Tile {
         this.touching = 0;
     }
 
-    calculateTouching() {
+    getTouching() {
+        return this.touching;
+    }
+
+    increaseTouching() {
         this.touching++;
     }
 
