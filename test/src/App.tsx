@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Field from './components/Field';
+import Field from './components/Minesweeper/Field'
 
 function App() {
   return (

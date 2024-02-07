@@ -15,7 +15,7 @@ class Tile {
         this.touching++;
     }
 
-    getInfo() {
+    isMine() {
         return this.mineStatus;
     }
 }

@@ -11,7 +11,7 @@ class TileMap {
         // Build array of Tiles and Options
         for (let i=0; i<height; i++) {
             this.arr[i] = [];
-            this.options[i] = [];
+            // this.options[i] = [];
             for (let j=0; j<width; j++) {
                 this.arr[i][j] = new Tile();
                 this.options.push([i, j]);
@@ -28,14 +28,12 @@ class TileMap {
 
             // Adjust neighboring Tile touching counts
             for (let a=i-1; a<(i+2); a++) {
-                if ((a < 0) || (a >= height)) {
-                    continue;
-                }
-                for (let b=j-1; b<(j+2); b++) {
-                    if ((b < 0) || (b >= width)) {
-                        continue;
+                if ((a > 0) && (a <= height)) {
+                    for (let b=j-1; b<(j+2); b++) {
+                        if ((b > 0) && (b <= width)) {
+                            this.arr[a][b].increaseTouching();
+                        }
                     }
-                    this.arr[a][b].increaseTouching();
                 }
             }
 
@@ -46,12 +44,16 @@ class TileMap {
           }
     }
 
-    getTileInfo(id : string) {
-        return this.arr[Number(id[0])][Number(id[1])].getInfo();
+    getTile(id : string) {
+        return this.arr[Number(id[0])][Number(id[1])];
     }
 
-    getTileTouching(id: string) {
-        return this.arr[Number(id[0])][Number(id[1])].getTouching();
+    getHeight() {
+        return this.arr.length;
+    }
+
+    getWidth() {
+        return this.arr[0].length;
     }
 }
 
