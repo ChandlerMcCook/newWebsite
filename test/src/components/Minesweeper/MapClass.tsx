@@ -28,9 +28,9 @@ class TileMap {
 
             // Adjust neighboring Tile touching counts
             for (let a=i-1; a<(i+2); a++) {
-                if ((a > 0) && (a <= height)) {
+                if ((a >= 0) && (a < height)) {
                     for (let b=j-1; b<(j+2); b++) {
-                        if ((b > 0) && (b <= width)) {
+                        if ((b >= 0) && (b < width)) {
                             this.arr[a][b].increaseTouching();
                         }
                     }
@@ -42,6 +42,10 @@ class TileMap {
             this.options.splice(index, 1);
             this.arr[i][j].mineStatus = true;
           }
+    }
+
+    Reveal(i : number, j : number) {
+        this.arr[i][j].revealed = true;
     }
 
     getTile(id : string) {
