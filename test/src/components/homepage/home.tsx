@@ -2,7 +2,7 @@ import './home.css';
 
 function Home() {
     return (
-        <div id='bruh'>squeaall</div>
+        <p>hii</p>
     );
 };
 
