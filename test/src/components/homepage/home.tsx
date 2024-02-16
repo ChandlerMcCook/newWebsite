@@ -1,3 +1,9 @@
-export default function Home() {
-    return <p>Hello there</p>;
+import './home.css';
+
+function Home() {
+    return (
+        <div id='bruh'>squeaall</div>
+    );
 };
+
+export default Home;
