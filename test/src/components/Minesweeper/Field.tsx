@@ -14,6 +14,7 @@ export default function Field() {
             board.push(
                 <div className="spot">
                     <button type = "button"
+                            title="mine"
                             id={horizontalAxis[i]+verticalAxis[j]} 
                             className="mineButton" 
                             onClick={e => MineClick(e.currentTarget.id)}
