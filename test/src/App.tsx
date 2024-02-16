@@ -8,7 +8,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function MyApp() {
   return (
-    
+    <div></div>
   );
 }
 
