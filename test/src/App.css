@@ -1,7 +1,14 @@
 #app{
   display: grid;
   place-content: center;
+  background-color: grey;
   height: 100vh;
-
-  background-color: white;
+  width: 100%;
 }
+
+/* #navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+} */
+

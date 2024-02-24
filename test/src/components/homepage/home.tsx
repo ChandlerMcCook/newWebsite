@@ -2,7 +2,7 @@ import './home.css';
 
 function Home() {
     return (
-        <p>hii</p>
+        <div id="homepage">Hello there</div>
     );
 };
 
