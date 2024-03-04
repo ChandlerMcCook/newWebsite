@@ -1,3 +1,44 @@
 #homepage{
     background-color: aqua;
 }
+
+.home {    display: grid;
+  grid-template-columns: repeat(8, 100px);
+  max-width: 800px;
+  background-color: white;
+  border: 2px solid red;
+}
+
+.gameSpot {
+  display: grid;
+  width: 100px;
+  height: 100px;
+  grid-template-rows: repeat(2, 50px);
+  border: 2px solid red;
+  place-items: center;
+}
+
+.gameButton {
+  color: red;
+  font-size: 12px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border: none;
+  width: 96px;
+  height: 40px;
+  background-color: rgb(228, 219, 219);
+  cursor: pointer;
+}
+
+.gameButton:hover {
+  background-color: rgb(158, 152, 152);
+  color: blue;
+}
+
+img {
+  border-radius: 50%;
+}
+  
+
+

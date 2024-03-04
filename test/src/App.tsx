@@ -1,7 +1,7 @@
 import React from 'react';
 import {Routes, Route} from 'react-router-dom';
 import './App.css';
-import Field from './components/Minesweeper/Field';
+import Field from './components/games/Minesweeper/Field';
 import Home from './components/homepage/home';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -32,7 +32,8 @@ function App() {
       <MyNavbar />
       <Routes>
         <Route path="/" element = {<Home></Home>} />
-        <Route path="/Minesweeper" element = {<Field></Field>} />
+        <Route path="/game/Minesweeper" element = {<Field></Field>} />
+        <Route path="/games/:gameID" element = {<Home></Home>} />
       </Routes>
     </div>
   );
