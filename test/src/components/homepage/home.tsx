@@ -17,7 +17,7 @@ export default function Home() {
         for (let j = 0; j < GameColumns; j++) {
             games.push(
                 <div className="gameSpot">
-                    <img src="./piggity.png" alt="pig" height="50px" width="50px"/>
+                    <img src="https://ih1.redbubble.net/image.1607873225.2586/raf,360x360,075,t,fafafa:ca443f4786.jpg" alt="pig" height="50px" width="50px" className='gameImage'/>
                     <button className='gameButton' id={gameList[i][j]} onClick={() => window.location.href = `/game/${gameList[i][j]}`}>{gameList[i][j]}</button>
                 </div>
             )
