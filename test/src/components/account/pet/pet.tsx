@@ -1,9 +1,10 @@
 import PetProps from "./PetClass";
+import './pet.css';
 
 export default function Pet({ name, animal, breed }: PetProps) {
   return (
-    <div>
-      <img src="https://www.all-creatures.org/wm/yoda-theswamprescue2.jpg" alt="pet" className="petImage"/>
+    <div className="pet-div">
+      <img src="/pet/pige.jpg" alt="pet" className="pet-image"/>
       <h1>{name}</h1>
       <h2>{animal} - {breed}</h2>
     </div>

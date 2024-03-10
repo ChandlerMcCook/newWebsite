@@ -5,7 +5,7 @@ const GameColumns = 8;
 
 const gameList = [
     ["Hamlet's Quest", "Sowcraft", "Baconborne", "Truffle Hunter", "Porker's Creed", "Hogwarts", "Boarcraft", "Pork Souls"],
-    ["Snoutbound", "Porker Kart", "Piggy Gear Solid", "Oink Theft Auto V", "Piggy Odyssey", "PiggyCraft: Bacon Edition", "Piggy Fantasy", "Piggy Crossing"],
+    ["Snoutbound", "Porker Kart", "Piggy Gear Solid", "Oink Theft Auto V", "Piggy Odyssey", "PiggyCraft: Bacon Edition", "Piggy Fantasy", "Pig Schmunch"],
     ["Piggy Crossing: New Leaf", "Piggy Crossing: Wild World", "Minesweeper", "Piggy Crossing: New Horizons", "Piggy Kart 8 Deluxe", "Piggy Crossing: Happy Home Designer", "Piggy Crossing: City Folk", "Piggy Crossing: Amiibo Festival"],
     ["Piggy Scrolls V: Swine-rim", "Piggyborn", "Pigout 76", "Pigout: New Vegas", "Pigout: Skyrim", "Pigout: Oblivion", "Pigout: Morrowind", "Pigout: Daggerfall"]
   ];
