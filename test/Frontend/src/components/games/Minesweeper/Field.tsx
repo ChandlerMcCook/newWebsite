@@ -18,7 +18,10 @@ export default function Field() {
                             id={horizontalAxis[i]+verticalAxis[j]} 
                             className="mineButton" 
                             onClick={e => MineClick(e.currentTarget.id)}
-                            onContextMenu={e=>Flag(e.currentTarget.id)}>
+                            onContextMenu={e=>{
+                                e.preventDefault()
+                                Flag(e.currentTarget.id)
+                            }}>
                     </button>
                 </div>
             );

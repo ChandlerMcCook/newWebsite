@@ -30,13 +30,14 @@ export default function MineClick(id: string) {
     let t : Tile = board.getTile(id);
 
     if (slot) {
+        const touching = t.getTouching();
         if(t.isMine()) {
             slot.style.backgroundColor = "red";
-        } else if (t.getTouching() === 0){
+        } else if (touching === 0){
             FloodFill(id);
         } else {
             slot.style.backgroundColor = "#45db24";
-            slot.innerHTML = String(t.getTouching());
+            slot.innerHTML = String(touching);
         }
     }
 };
