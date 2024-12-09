@@ -5,6 +5,7 @@ import Home from './components/homepage/home';
 import SignIn from './components/account/signIN';
 import Pet from './components/account/pet/pet';
 import PigSchmunch from './components/games/Piggy Crossing/PigSchmunch';
+import PigTacToe from './components/games/TicTacToe/PigTacToe'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -53,6 +54,7 @@ function App() {
         <Route path="/" element = {<Home></Home>} />
         <Route path="/game/Minesweeper" element = {<Field></Field>} />
         <Route path="/game/Pig Schmunch" element = {<PigSchmunch></PigSchmunch>} />
+        <Route path="/game/PigTacToe" element = {<PigTacToe></PigTacToe>} />
         <Route path="/game/:gameID" element = {<Home></Home>} />
         <Route path="user/login" element = {<SignIn></SignIn>} />
         <Route path="user/register" element = {<SignIn></SignIn>} />
