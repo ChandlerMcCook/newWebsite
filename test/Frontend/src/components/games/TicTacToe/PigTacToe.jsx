@@ -30,6 +30,7 @@ export default function PigTacToe() {
 
     const CallChatGPTResponse = async () => {
         const input = userInput
+        console.log(input)
         setUserInput("")
         setMessages(prev => [
             ...prev,
@@ -56,7 +57,7 @@ export default function PigTacToe() {
     });
       
     function generateWav() {
-        return synth.MakeAnimalese(titoText, false, 0.3).dataURI
+        return synth.MakeAnimalese(titoText, true, 0.3).dataURI
     }
       
     function preview() {
@@ -64,10 +65,17 @@ export default function PigTacToe() {
         audio.play()
     }
 
-    return (
-        <div style={{ display: 'flex', gap: 50 }}>
+    let board = [];
+    for (let i=0; i<3; i++) {
+        for (let j=0; j<3; j++) {
+            
+        }
+    }
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 50 }}>
+    return (
+        <div style={{ display: 'flex', gap: 50}}>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 50, alignItems: 'center' }}>
 
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                     <img src={tito} alt="tito" height={300} width={300}></img>
@@ -77,8 +85,9 @@ export default function PigTacToe() {
                             flexGrow: 1,         // Makes the textarea take up remaining space
                             padding: '10px',     // Adds padding inside the textarea
                             resize: 'none',      // Disables resizing of the textarea
-                            minHeight: '100px',  // Minimum height of the textarea
-                            width: '200px'       // You can set a fixed width or leave it flexible
+                            minHeight: '200px',  // Minimum height of the textarea
+                            width: '400px',       // You can set a fixed width or leave it flexible
+                            animation: 'typing 2s;'
                         }}
                         value={titoText}
                         readOnly
@@ -95,7 +104,9 @@ export default function PigTacToe() {
 
             </div>
 
-            <canvas style={{ borderColor: 'black' }} width={500} height={500}></canvas>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 100px)', gridTemplateRows: 'repeat(3, 100px)', height: '300px', width: '300px', backgroundColor: 'darkgray' }} width={500} height={500}>
+                for ()
+            </div>
         </div>
     )
 }
