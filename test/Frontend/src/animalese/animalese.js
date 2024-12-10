@@ -25,7 +25,7 @@ export var Animalese = function(letters_file, onload) {
     var library_letter_secs = 0.15;
     var library_samples_per_letter =
         Math.floor(library_letter_secs * sample_freq);
-    var output_letter_secs = 0.075;
+    var output_letter_secs = 0.05;
     var output_samples_per_letter =
         Math.floor(output_letter_secs * sample_freq);
 
@@ -36,8 +36,12 @@ export var Animalese = function(letters_file, onload) {
             library_samples_per_letter * (c.charCodeAt(0) - 'A'.charCodeAt(0));
 
         for (var i = 0; i < output_samples_per_letter; i++) {
+          // added pitch up if it's a question
           data[c_index * output_samples_per_letter + i] =
-              this.letter_library[44 + library_letter_start + Math.floor(i * pitch)];
+              (c_index + 1 < processed_script.length && processed_script[c_index+1] == '?') ?
+                this.letter_library[44 + library_letter_start + Math.floor(i * pitch * 1.2)]
+              :
+                this.letter_library[44 + library_letter_start + Math.floor(i * pitch)];
         }
       } else { // non pronouncable character or space
         for (var i = 0; i < output_samples_per_letter; i++) {
