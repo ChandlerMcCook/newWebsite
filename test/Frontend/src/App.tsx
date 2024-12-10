@@ -16,7 +16,7 @@ const signedIn = true;
 function MyNavbar() {
   return (
     <div id="navbar">
-      <Navbar fixed="top" className="bg-body-tertiary">
+      <Navbar fixed="top" className="bg-body-tertiary" data-bs-theme="dark">
         <Container>
           <Navbar.Brand href="/">Pigkins</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -66,19 +66,3 @@ function App() {
 }
 
 export default App;
-
-
-
-// <div id="navbar">
-// <Navbar expand="lg" className = "bg-body-tertiary">
-//   <Container>
-//     <Navbar.Brand href="/">Squealsite</Navbar.Brand>
-//     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-//     <Navbar.Collapse id="basic-navbar-nav">
-//       <Nav className="me-auto">
-//         <Nav.Link href="/Minesweeper">Minesweeper</Nav.Link>
-//       </Nav>
-//     </Navbar.Collapse>
-//   </Container>
-// </Navbar>
-// </div>
