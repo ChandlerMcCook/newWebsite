@@ -1,0 +1,28 @@
+.overall {
+    display: flex; 
+
+    gap: 50px;
+}
+
+.animalsAndInput {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.animals {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.animalContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+}
